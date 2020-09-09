@@ -5,24 +5,18 @@ namespace Ulv\Statistics;
 /**
  * @package Ulv\Statistics
  */
-class Distribution
+class Distribution implements DistributionInterface
 {
     use ValidationTrait;
 
-    /**
-     * @see https://en.wikipedia.org/wiki/Arithmetic_mean
-     */
-    function mean(array $array): float
+    public function mean(array $array): float
     {
         $this->notEmpty($array);
 
         return array_sum($array) / count($array);
     }
 
-    /**
-     * @see https://en.wikipedia.org/wiki/Median
-     */
-    function median(array $array): float
+    public function median(array $array): float
     {
         $this->notEmpty($array);
 
@@ -31,10 +25,7 @@ class Distribution
         return ($array[$len / 2] + $array[($len - 1) / 2]) / 2;
     }
 
-    /**
-     * @see https://en.wikipedia.org/wiki/Mode_(statistics)
-     */
-    function mode(array $array): float
+    public function mode(array $array): float
     {
         $this->notEmpty($array);
 
@@ -44,10 +35,7 @@ class Distribution
         return array_shift($maxs);
     }
 
-    /**
-     * @see https://en.wikipedia.org/wiki/Weighted_arithmetic_mean
-     */
-    function weightedMean(array $array, array $weights): float
+    public function weightedMean(array $array, array $weights): float
     {
         $this->notEmpty($array);
         $this->notEmpty($weights);
