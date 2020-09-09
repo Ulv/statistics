@@ -9,6 +9,6 @@ A collection of statistical functions for everyday use.
     - [Weighted mean](https://en.wikipedia.org/wiki/Weighted_arithmetic_mean)
 - Variation
     - [Standard deviation](https://en.wikipedia.org/wiki/Standard_deviation)
-- Quartile
+- [Quartile](https://en.wikipedia.org/wiki/Quartile)
     
 For usage examples see "examples.php"
