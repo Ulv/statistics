@@ -45,4 +45,10 @@ class Quartile
             'Q3' => $this->distribution->median($upper),
         ];
     }
+
+    public function interquartileRange(array $data): float
+    {
+        $data = $this->calc($data);
+        return $data['Q3'] - $data['Q1'];
+    }
 }

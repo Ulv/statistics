@@ -24,6 +24,7 @@ $quartile = new \Ulv\Statistics\Quartile();
 ]
  */
 var_dump($quartile->calc([3, 7, 8, 5, 12, 14, 21, 13, 18]));
+var_dump($quartile->interquartileRange([3, 7, 8, 5, 12, 14, 21, 13, 18])); // 10
 
 /*
 [
@@ -33,3 +34,4 @@ var_dump($quartile->calc([3, 7, 8, 5, 12, 14, 21, 13, 18]));
 ]
  */
 var_dump($quartile->calc([3, 7, 8, 5, 12, 14, 21, 13,]));
+var_dump($quartile->interquartileRange([3, 7, 8, 5, 12, 14, 21, 13,])); // 7.5
