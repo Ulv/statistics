@@ -9,5 +9,6 @@ A collection of statistical functions for everyday use.
     - Weighted mean
 - Variation
     - Standard deviation
+- Quartile
     
 For usage examples see "examples.php"
