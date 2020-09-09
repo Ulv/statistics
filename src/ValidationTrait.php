@@ -3,7 +3,6 @@
 namespace Ulv\Statistics;
 
 /**
- * Class Validation
  * @package Ulv\Statistics
  */
 trait ValidationTrait

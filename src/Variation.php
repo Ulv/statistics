@@ -9,9 +9,6 @@ class Variation
 {
     use ValidationTrait;
 
-    /**
-     * @see https://en.wikipedia.org/wiki/Standard_deviation
-     */
     function stdDev(array $array): float
     {
         $this->notEmpty($array);
