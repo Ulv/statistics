@@ -1,0 +1,16 @@
+{
+  "name": "ulv/statistics",
+  "description": "A collection of statistical functions",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Vladimir Chmil",
+      "email": "vladimir.chmil@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Ulv\\statistics": "src/"
+    }
+  }
+}
