@@ -51,6 +51,7 @@ class Distribution
     {
         $this->notEmpty($array);
         $this->notEmpty($weights);
+        $this->sizeEquals($array, $weights);
 
         $num = 0;
         foreach ($array as $i => $v) {
