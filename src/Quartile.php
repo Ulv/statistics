@@ -9,6 +9,10 @@ class Quartile
 {
     use ValidationTrait;
 
+    const Q1 = 'Q1';
+    const Q2 = 'Q2';
+    const Q3 = 'Q3';
+
     /**
      * @var DistributionInterface
      */
@@ -40,15 +44,15 @@ class Quartile
         }
 
         return [
-            'Q1' => $this->distribution->median($lower),
-            'Q2' => $median,
-            'Q3' => $this->distribution->median($upper),
+            self::Q1 => $this->distribution->median($lower),
+            self::Q2 => $median,
+            self::Q3 => $this->distribution->median($upper),
         ];
     }
 
     public function interquartileRange(array $data): float
     {
         $data = $this->calc($data);
-        return $data['Q3'] - $data['Q1'];
+        return $data[self::Q3] - $data[self::Q1];
     }
 }
